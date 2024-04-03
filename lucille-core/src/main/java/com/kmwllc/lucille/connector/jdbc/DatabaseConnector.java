@@ -196,7 +196,7 @@ public class DatabaseConnector extends AbstractConnector {
         }
         if (!otherResults.isEmpty()) {
           // this is the primary key that the result set is ordered by.
-          Integer joinId = rs.getInt(idField);
+          Integer joinId = rs.getObject(idField);
           int childId = -1;
           int j = 0;
           for (ResultSet otherResult : otherResults) {
